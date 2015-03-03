@@ -1,0 +1,20 @@
+package PageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class BaseModel {
+	
+	protected WebDriver driver;
+	
+	public BaseModel() {
+		this.driver = new FirefoxDriver();
+	}
+	
+	public BaseModel(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	
+	
+}

@@ -1,0 +1,57 @@
+package Tests;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import PageObjects.BaseObject;
+
+public class BaseTest {
+	
+	protected WebDriver driver;
+	private BaseObject bObj;
+
+	@BeforeMethod(alwaysRun = true)
+	public void startSession()
+	{
+		
+		try {
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.get("http://test.otdk.hu");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	@AfterMethod(alwaysRun = true)
+	public void closeSession()
+	{
+		if (driver != null) {
+			driver.close();
+			driver.quit();
+		}
+	}
+	
+	
+	@Test(enabled = true)
+	public void Test01()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Tulajdonos/Documents/OTDK_Test/chromedriver.exe");
+//		bObj = new BaseObject(new FirefoxDriver());
+		bObj = new BaseObject(new ChromeDriver());
+		
+	}
+	
+	
+	
+}

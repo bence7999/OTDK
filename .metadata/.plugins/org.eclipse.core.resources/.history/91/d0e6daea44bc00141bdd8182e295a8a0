@@ -1,0 +1,19 @@
+package Tests;
+
+
+import PageObjects.BaseObject;
+
+public class BaseTest {
+	
+	private BaseObject bObj;
+
+	@Test(enabled = true)
+	public void Test01()
+	{
+		
+		
+	}
+	
+	
+	
+}

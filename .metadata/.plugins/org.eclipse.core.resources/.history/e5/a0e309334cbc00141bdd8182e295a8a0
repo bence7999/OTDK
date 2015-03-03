@@ -1,0 +1,12 @@
+package Tests;
+
+
+import PageObjects.BaseObject;
+
+public class BaseTest {
+	
+
+	
+	
+	
+}

@@ -1,0 +1,16 @@
+package PageObjects;
+
+
+
+public class BaseObject {
+	
+	private WebDriver driver;
+	
+	public BaseObject(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	
+	
+	
+}

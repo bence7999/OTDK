@@ -1,0 +1,15 @@
+package Tests;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import PageObjects.BaseObject;
+
+public class BaseTest {
+	
+	private BaseObject bObj;
+
+	
+	
+	
+}

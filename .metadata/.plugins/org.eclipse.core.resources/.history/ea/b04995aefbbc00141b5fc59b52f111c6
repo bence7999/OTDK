@@ -1,0 +1,14 @@
+package Tests;
+
+import org.testng.annotations.Test;
+
+public class SampleTest extends BaseTest{
+
+	
+	
+	@Test(enabled = false)
+	public void test01()
+	{
+	}
+	
+}

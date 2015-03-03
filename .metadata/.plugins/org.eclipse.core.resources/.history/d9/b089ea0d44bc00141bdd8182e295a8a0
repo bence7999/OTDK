@@ -1,0 +1,33 @@
+package Tests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+import PageObjects.BaseObject;
+
+public class BaseTest {
+	
+	private BaseObject bObj;
+
+	@Test(enabled = true)
+	public void Test01()
+	{
+//		bObj = new BaseObject(new FirefoxDriver());
+		bObj = new BaseObject(new ChromeDriver());
+		
+	}
+	
+	@Test(enabled = false)
+	public void testGoogleSearch() throws InterruptedException {
+	  
+
+	  WebDriver driver = new ;
+	  driver.get("http://test.otdk.hu");
+	  driver.quit();
+	}
+	
+}

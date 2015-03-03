@@ -1,0 +1,32 @@
+package PageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+public class BaseObject {
+	
+	private WebDriver driver;
+	
+	@BeforeMethod
+	public void startSession()
+	{
+		
+		try {
+			
+			
+		} catch (Exception e) {
+		}
+		
+	}
+	
+	
+	
+	@AfterMethod
+	public void closeSession()
+	{
+		
+	}
+	
+	
+}

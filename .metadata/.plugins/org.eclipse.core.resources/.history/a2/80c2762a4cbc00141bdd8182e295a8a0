@@ -1,0 +1,23 @@
+package Tests;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import PageObjects.BaseObject;
+
+public class BaseTest {
+	
+	private BaseObject bObj;
+
+	@Test(enabled = true)
+	public void Test01()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Tulajdonos/Documents/OTDK_Test/chromedriver.exe");
+//		bObj = new BaseObject(new FirefoxDriver());
+		bObj = new BaseObject(new ChromeDriver());
+		
+	}
+	
+	
+	
+}

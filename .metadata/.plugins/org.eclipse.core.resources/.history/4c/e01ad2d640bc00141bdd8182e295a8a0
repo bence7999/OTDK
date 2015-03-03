@@ -1,0 +1,46 @@
+package PageObjects;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+public class BaseObject {
+	
+	private WebDriver driver;
+	
+	public BaseObject(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	@BeforeMethod
+	public void startSession()
+	{
+		
+		try {
+			System.out.println("lefuT");
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.get("http://test.otdk.hu");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	@AfterMethod
+	public void closeSession()
+	{
+		if (driver != null) {
+			driver.close();
+			driver.quit();
+		}
+	}
+	
+	
+}

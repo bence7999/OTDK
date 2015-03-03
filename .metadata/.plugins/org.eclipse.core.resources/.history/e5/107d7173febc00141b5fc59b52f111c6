@@ -1,0 +1,19 @@
+package PageObjects;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+public class BaseModel {
+	
+	private WebDriver driver;
+	
+	public BaseModel(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	
+	
+}
